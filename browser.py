@@ -2,6 +2,9 @@ from selenium import webdriver
 from win10toast import ToastNotifier
 
 toast = ToastNotifier()
+from win10toast import ToastNotifier
+
+toast = ToastNotifier()
 
 
 ent_cookies = [
@@ -22,6 +25,26 @@ ent_cookies = [
         'sameSite': 'Lax',
         'secure': True,
         'value': 'D79FC9A63135FE00021A7540E5B0C029'
+    },
+    {
+        'domain': '.wayf.cesi.fr',
+        'expiry': 1738758386,
+        'httpOnly': False,
+        'name': '_pk_id.9.5fe9',
+        'path': '/',
+        'sameSite': 'Lax',
+        'secure': True,
+        'value': 'e4b2552385498fe8.1704803186.'
+    },
+    {
+        'domain': '.wayf.cesi.fr',
+        'expiry': 1704804986,
+        'httpOnly': False,
+        'name': '_pk_ses.9.5fe9',
+        'path': '/',
+        'sameSite': 'Lax',
+        'secure': True,
+        'value': '1'
     },
     {
         'domain': '.wayf.cesi.fr',
@@ -73,6 +96,7 @@ print("🔁 | Setting cookies...")
 
 driver.delete_all_cookies()
 good = True
+
 for cookie in ent_cookies:
     if cookie['name'] == 'BIGipServer~ADMIN~pool-WAYF-https':
         cookie['value'] = BIGipServer
@@ -81,6 +105,23 @@ for cookie in ent_cookies:
     else:
         continue
     
+    try:
+        driver.add_cookie(cookie)
+        print(f"\t🆗 | Cookie {cookie['name']} set to {cookie['value']}")
+    except Exception as e:
+        print(f"\t❌ | Error while setting cookie {cookie['name']} : {e}")
+        good = False
+    
+
+if good : print("✅ | Cookies set !\n\t", driver.get_cookies())
+else :
+    print("❌ | Error while setting cookies !")
+    toast.show_toast(
+        "❌ | Error while setting cookies !",
+        "Please check your cookies and try again.",
+        threaded = True,
+    )
+
     try:
         driver.add_cookie(cookie)
         print(f"\t🆗 | Cookie {cookie['name']} set to {cookie['value']}")
