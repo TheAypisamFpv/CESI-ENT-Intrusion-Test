@@ -15,7 +15,7 @@ ent_cookies = [
         'path': '/',
         'sameSite': 'Lax',
         'secure': True,
-        'value': 'rd1o00000000000000000000ffff0a601a38o443'
+        'value': ''
     },
     {
         'domain': 'wayf.cesi.fr',
@@ -24,7 +24,7 @@ ent_cookies = [
         'path': '/',
         'sameSite': 'Lax',
         'secure': True,
-        'value': 'D79FC9A63135FE00021A7540E5B0C029'
+        'value': ''
     },
     {
         'domain': '.wayf.cesi.fr',
@@ -34,7 +34,7 @@ ent_cookies = [
         'path': '/',
         'sameSite': 'Lax',
         'secure': True,
-        'value': 'e4b2552385498fe8.1704803186.'
+        'value': ''
     },
     {
         'domain': '.wayf.cesi.fr',
@@ -44,7 +44,7 @@ ent_cookies = [
         'path': '/',
         'sameSite': 'Lax',
         'secure': True,
-        'value': '1'
+        'value': ''
     },
     {
         'domain': '.wayf.cesi.fr',
@@ -54,7 +54,7 @@ ent_cookies = [
         'path': '/',
         'sameSite': 'Lax',
         'secure': True,
-        'value': 'e4b2552385498fe8.1704803186.'
+        'value': ''
     },
     {
         'domain': '.wayf.cesi.fr',
@@ -64,7 +64,7 @@ ent_cookies = [
         'path': '/',
         'sameSite': 'Lax',
         'secure': True,
-        'value': '1'
+        'value': ''
     }
 ]
 
