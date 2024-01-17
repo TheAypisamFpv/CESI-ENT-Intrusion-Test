@@ -1,6 +1,6 @@
 # ⚠️ WARNING ⚠️
 
-This project and associated script are for educational purposes only and should be used ethically. Any malicious or illegal use is strictly prohibited. I take no responsibility for any inappropriate use of this script.
+This project and associated scripts are for educational purposes only and should be used ethically. Any malicious or illegal use is strictly prohibited. I take no responsibility for any inappropriate use of this script.
 
 ---
 
