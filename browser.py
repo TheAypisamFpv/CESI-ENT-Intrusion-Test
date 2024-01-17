@@ -135,6 +135,8 @@ def set_cookies(driver: webdriver.Chrome):
     driver.add_cookie(JSESSIONID_cookie)
     driver.add_cookie(BIGipServer_cookie)
 
+    
+
     terminal_print(f"🔁 | {bcolors.OKCYAN}reloading ent accueil page...")
     driver.get(ent_accueil_url)
 
