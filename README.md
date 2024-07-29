@@ -8,6 +8,8 @@ This project and associated scripts are for educational purposes only and should
 
 ## Introduction
 
+Presentation: https://slides.com/theaypisamfpv/ent_vulnerability_research#/0/1
+
 This project aims to explore potential vulnerabilities in authentication systems, focusing specifically on ENT (Digital Workspace) accounts and methods of accessing an account without knowing the password.
 
 ## Goals
